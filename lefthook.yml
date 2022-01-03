@@ -1,0 +1,11 @@
+pre-commit:
+  piped: true
+  commands:
+    1_docker-compose:
+      run: docker compose up -d
+    2_format:
+      glob: '*.{js,ts,jsx,tsx}'
+      run: docker compose exec web yarn format
+    3_lint:
+      glob: '*.{js,ts,jsx,tsx}'
+      run: docker compose exec web yarn lint
