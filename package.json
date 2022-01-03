@@ -1,5 +1,5 @@
 {
-  "name": "aaa",
+  "name": "nextjs-start-template",
   "private": true,
   "scripts": {
     "dev": "next dev",
