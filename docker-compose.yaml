@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  web:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/workspace:cached
+      - web-node-modules:/workspace/node_modules
+      - web-extensions:/root/.vscode-server/extensions
+    
+    command: /bin/sh -c "while sleep 1000; do :; done"
+
+volumes:
+  web-node-modules:
+  web-extensions:
