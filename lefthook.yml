@@ -3,9 +3,11 @@ pre-commit:
   commands:
     1_docker-compose:
       run: docker compose up -d
-    2_format:
+    2_type-check:
+      glob: '*.{ts,tsx}'
+      run: docker compose exec web yarn type-check
+    3_format:
+      run: docker compose exec web yarn format:fix
+    4_lint:
       glob: '*.{js,ts,jsx,tsx}'
-      run: docker compose exec web yarn format
-    3_lint:
-      glob: '*.{js,ts,jsx,tsx}'
-      run: docker compose exec web yarn lint
+      run: docker compose exec web yarn lint:fix

@@ -9,6 +9,7 @@
     "format": "prettier --check .",
     "lint:fix": "eslint . --fix ",
     "format:fix": "prettier --write .",
+    "type-check": "tsc --noEmit",
     "test": "jest",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
