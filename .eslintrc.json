@@ -2,6 +2,7 @@
   "plugins": ["unused-imports", "import", "simple-import-sort"],
   "extends": [
     "plugin:@typescript-eslint/recommended",
+    "plugin:storybook/recommended",
     "next/core-web-vitals",
     "prettier"
   ]
